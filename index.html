@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abyssus Random Loadout Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>⚡ ABYSSUS · Рандомайзер билдов ⚡</h1>
+
+    <div class="settings-panel">
+        <div class="players-select">
+            <label for="players">👥 Количество игроков:</label>
+            <input type="number" id="players" min="1" max="3" value="1" step="1">
+        </div>
+
+        <div class="categories">
+            <!-- Оружие -->
+            <div class="category" id="weapon-category">
+                <h2>🔫 Оружие</h2>
+                <div class="checkbox-group" id="weapon-list"></div>
+                <button class="select-all-btn" data-category="weapon">✔ Выбрать всё</button>
+            </div>
+
+            <!-- Способности -->
+            <div class="category" id="ability-category">
+                <h2>✨ Способности</h2>
+                <div class="checkbox-group" id="ability-list"></div>
+                <button class="select-all-btn" data-category="ability">✔ Выбрать всё</button>
+            </div>
+
+            <!-- Аспекты -->
+            <div class="category" id="aspect-category">
+                <h2>🌀 Аспекты</h2>
+                <div class="checkbox-group" id="aspect-list"></div>
+                <button class="select-all-btn" data-category="aspect">✔ Выбрать всё</button>
+            </div>
+        </div>
+
+        <button class="generate-btn" id="generateBtn">🎲 СГЕНЕРИРОВАТЬ</button>
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <div id="cardsContainer" class="cards-container"></div>
+    <div class="footer-note">— аспекты внутри одной карточки не повторяются —</div>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
